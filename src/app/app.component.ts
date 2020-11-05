@@ -183,7 +183,7 @@ export class FileDatabase {
   providers: [FileDatabase]
 })
 export class AppComponent {
-  title = 'tree-add-delete';
+  title = 'tree';
   @ViewChild('treeSelector') tree: any;
 
   nestedTreeControl: NestedTreeControl<FileNode>;
