@@ -1,43 +1,4 @@
-
 <app-header></app-header>
 <main>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </main>
-<!-- <app-error *ngIf="hasError"></app-error> -->
-
-<!-- <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="example-tree" #treeSelector>
-	<mat-nested-tree-node *matTreeNodeDef="let node; when: hasNestedChild">
-		<li>
-			<div class="mat-tree-node">
-				<button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
-          <mat-icon class="mat-icon-rtl-mirror" *ngIf="node.children.length>0">
-            {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-          </mat-icon>
-        </button> <input type="text" [(ngModel)]="node.filename" name="node" />
-        <button  mat-icon-button (click)="addNewItem(node)"><mat-icon>add</mat-icon></button>
-        <button id="myBtn" mat-icon-button (click)="openModal(node)"><mat-icon>addchart</mat-icon>
-        </button>
-				<button *ngIf="node.children.length ==0 && node.level!=0 " mat-icon-button (click)="remove(node)"><mat-icon>close</mat-icon></button>
-
-			</div>
-			<ul [class.example-tree-invisible]="!nestedTreeControl.isExpanded(node)">
-				<ng-container matTreeNodeOutlet></ng-container>
-			</ul>
-		</li>
-	</mat-nested-tree-node>
-</mat-tree>
-<hr/>
-<div>
-  <input type="button" id="bt" value="Save data to file" (click)="saveFile()" />
-</div>
-
-<div id="myModal" class="modal">
-  <!-- Modal content -->
- <div class="modal-content" style="width: 800px;">
-  <form id = "formId">
-    <li><label>Name: <input class="formField" style="width:100%;" type="text" id="Name" placeholder="Name"></label></li>
-    <li><label>Description: <input class="formField" style="width:100%;" type="text" id="Description" placeholder="Description"></label></li>
-    <li><label>Price: <input class="formField" style="width:100%;" type="text" id="Price" placeholder="Price"></label></li>
-    <button type="submit" (click)="submitAttribute()">Submit</button>
-  </form>
- </div> -->

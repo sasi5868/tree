@@ -1,9 +1,10 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const User = require("../models/user");
 
 exports.createUser = (req, res, next) => {
+  console.log("inside create user in controllers");
   bcrypt.hash(req.body.password, 10).then(hash => {
     const user = new User({
       email: req.body.email,
@@ -18,6 +19,7 @@ exports.createUser = (req, res, next) => {
         });
       })
       .catch(err => {
+        console.log("error: "+err);
         res.status(500).json({
           message: "Invalid authentication credentials!"
         });
